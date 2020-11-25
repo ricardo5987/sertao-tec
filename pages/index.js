@@ -1,19 +1,40 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import {Button } from 'semantic-ui-react'
+import { Menu, Input } from 'semantic-ui-react'
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-      <Button>ClickMe!!!</Button>
-        <title>Create Next App</title>
+        <title>Sertao-tec | empresa junior de Agronomia</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
+      <Menu pointing>
+          <Menu.Item
+            name='home'
+            active={activeItem === 'home'}
+            onClick={this.handleItemClick}
+          />
+          <Menu.Item
+            name='messages'
+            active={activeItem === 'messages'}
+            onClick={this.handleItemClick}
+          />
+          <Menu.Item
+            name='friends'
+            active={activeItem === 'friends'}
+            onClick={this.handleItemClick}
+          />
+          <Menu.Menu position='right'>
+            <Menu.Item>
+              <Input icon='search' placeholder='Search...' />
+            </Menu.Item>
+          </Menu.Menu>
+        </Menu>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Seja bem vindo a <a href="https://nextjs.org">Sertao TEC!</a>
         </h1>
 
         <p className={styles.description}>
