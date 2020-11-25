@@ -1,88 +1,106 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import { Menu, Input } from 'semantic-ui-react'
+import {
+  Container,
+  Row,
+  Col,
+  Button,
+  Card,
+  CardText,
+  CardTitle,
+  CardBody,
+} from 'reactstrap'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Container className="md-container">
       <Head>
-        <title>Sertao-tec | empresa junior de Agronomia</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>ReactJS with reactstrap</title>
+        <link rel="icon" href="/favicon-32x32.png" />
       </Head>
-
-      <main className={styles.main}>
-      <Menu pointing>
-          <Menu.Item
-            name='home'
-            active={activeItem === 'home'}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item
-            name='messages'
-            active={activeItem === 'messages'}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item
-            name='friends'
-            active={activeItem === 'friends'}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Menu position='right'>
-            <Menu.Item>
-              <Input icon='search' placeholder='Search...' />
-            </Menu.Item>
-          </Menu.Menu>
-        </Menu>
-        <h1 className={styles.title}>
-          Seja bem vindo a <a href="https://nextjs.org">Sertao TEC!</a>
+      <Container>
+        <h1>
+          Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+        <p>
+          Get started by editing <code>pages/index.js</code>
         </p>
+        <Container>
+          <Row>
+            <Col sm="6">
+              <Card className="my-3">
+                <CardBody>
+                  <CardTitle tag="h5">Documentation</CardTitle>
+                  <CardText>
+                    Find in-depth information about Next.js features and API.
+                  </CardText>
+                  <Button color="primary" href="https://nextjs.org/docs">
+                    More &rarr;
+                  </Button>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col sm="6">
+              <Card className="my-3">
+                <CardBody>
+                  <CardTitle tag="h5">Learn</CardTitle>
+                  <CardText>
+                    Learn about Next.js in an interactive course with quizzes!
+                  </CardText>
+                  <Button color="primary" href="https://nextjs.org/learn">
+                    More &rarr;
+                  </Button>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm="6">
+              <Card className="my-3">
+                <CardBody>
+                  <CardTitle tag="h5">Examples</CardTitle>
+                  <CardText>
+                    Discover and deploy boilerplate example Next.js projects.
+                  </CardText>
+                  <Button
+                    color="primary"
+                    href="https://github.com/vercel/next.js/tree/master/examples"
+                  >
+                    More &rarr;
+                  </Button>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col sm="6">
+              <Card className="my-3">
+                <CardBody>
+                  <CardTitle tag="h5">Deploy</CardTitle>
+                  <CardText>
+                    Instantly deploy your Next.js site to a public URL with
+                    Vercel.
+                  </CardText>
+                  <Button
+                    color="primary"
+                    href="https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=example&utm_campaign=next-example"
+                  >
+                    More &rarr;
+                  </Button>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </Container>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
+      <footer className="cntr-footer">
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://vercel.com?filter=next.js&utm_source=github&utm_medium=example&utm_campaign=next-example"
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          <img src="/vercel.svg" alt="Vercel Logo" className="sml-logo" />
         </a>
       </footer>
-    </div>
+    </Container>
   )
 }
